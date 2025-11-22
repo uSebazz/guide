@@ -1,0 +1,169 @@
+---
+title: Details | Kodi
+sidebar_label: Details
+sidebar_position: 2
+---
+
+# Details
+## Kodi
+Kodi is a software media player and entertainment hub, It can stream torrents provided by the addons,
+show photos from local storage, you can watch tv channels if you provide a ipvt, 
+listen music (locale storage), also you can play games in it!
+
+In this guide I’ll focus only in **Movies/Series**. The way we gonna search them is throught Addons
+
+
+### Addons
+
+Kodi itself does not provide any content. It is simply a powerful, open-source media center designed to play your local files or connect to addons. This separation exists to avoid legal issues and keeps the core application stable. What transforms Kodi into one of the most versatile streaming platforms is its addon ecosystem.
+
+Unlike Stremio, where addons are remote web services, **Kodi addons are locally installed packages** written mainly in Python. These addons extend Kodi’s functionality directly, making them far more flexible and capable, but also more complex. Because they run locally, they can scrape websites, resolve links, integrate with cloud services, gather artwork, pull metadata, and more.
+
+Kodi provides an addon framework and API that developers can use to build different types of addons. A Kodi addon can provide:
+
+- **Video Addons:**
+Fetch streams from websites, file hosts, debrid services, or torrent sources. These addons deliver the *actual playable content*.
+
+- **Metadata & Scraper Addons:**
+Provide metadata such as titles, actors, genres, artwork, ratings, and plots used in Kodi's library.
+
+- **Subtitle Addons:**
+Retrieve subtitles based on the video being played, using title, language preferences, or file hashes.
+
+- **Repository Addons:**
+Act as online addon stores where users can browse, install, and update other addons.
+
+- **Program Addons / Scripts:**
+Tools, utilities, maintenance tools, debrid managers, torrent engines, and other system-level extensions.
+
+When streaming content, Kodi video addons typically deliver one of two types of sources:
+
+- **HTTP/Direct Streams:** Resolved links from hosters or file servers.
+- **Torrent-Based Streams:** Streams delivered using torrent engines or premium debrid services.
+
+
+#### HTTP Addons
+HTTP addons will scrape for sources from a central server and provide these sources to Kodi.
+
+Addons that use HTTP streams are safe to use and will not get you flagged by your ISP. These streams are stored on a central server. Due to this, they are usually of lower size (and the quality) than torrents. This is because it reduces costs. Although they may have a lower quality, due to the lower file size, it requires less bandwidth to stream. This is useful for users with slower internet connections.
+
+HTTP streams are reliant on the server that hosts the file. A benefit of this is that, if a stream is available, it will work. This is unlike torrents, where you need seeders for the torrent to work. However, this is also a downside. If the server goes down, the stream will not work. Furthermore, these servers can be overloaded with users, which can cause buffering. These free central servers usually rely on ads to generate revenue. Through Kodi, users will not see any ads. Therefore, the hoster may make small changes often to counter scrapers, which can cause the addon to break.
+
+In summary, these are the advantages and disadvantages of HTTP addons:
+
+:::tip[Advantages]
+- No need for a VPN
+- No need to worry about seeders
+- Lower file size, which means less bandwidth is required to stream
+:::
+
+:::danger[Disadvantages]
+- Lower quality
+- Reliant on the server that hosts the file
+    - These types of sources are often taken down
+- Server can be overloaded with users, causing buffering
+- Addons can break often due to the hoster making changes to counter
+:::
+
+
+#### Torrent Addons
+Torrent addons, will scrape torrents from available sources on the web and provide these torrents to Kodi to stream.
+
+Torrents are based on a decentralised network and are not reliant on a single server to provide the content. As a result, torrents are usually of much higher quality than streams from HTTP addons. Other than generally having a higher quality, the range of qualities is much larger. There can be up to hundreds of, if not more, torrents available for a single movie or TV show episode, ranging from Blu-Ray REMUX to 480p quality, or even lower.
+
+Torrents are also more reliable. The addon itself is less likely to break as there is no incentive to stop scrapers from accessing the torrent. Moreover, you won't have to rely on a single server to provide the content. You will be able to stream the torrent as long as there are enough seeders.
+
+However, torrenting carries the risk of your IP being shown to the trackers on the torrent. This means that if that torrent is being monitored, DMCA notices can be sent to your ISP, who can then forward it to you. Continued torrenting can lead to your ISP throttling your internet speed or even terminating your internet connection.
+
+:::note
+It is important to note that the legal risk of torrenting is dependent on your country and ISP. In most countries, torrenting won't be an issue.
+
+Countrys where torrenting is ilegal:
+- **United States (USA)**
+- **United Kingdom (UK)**
+- **Germany**
+- **France**
+- **Japan**
+- **South Korea**
+- **Australia**
+- **Singapore**
+- **Finland**
+- **Norway**
+- **Denmark**
+- **Sweden**
+:::
+
+The speed of a torrent stream is heavily reliant on the number of seeders for that torrent. If a torrent has a small number of low speed seeders, you will encounter a lot of buffering.
+
+In summary, these are the advantages and disadvantages of torrent addons:
+:::tip[Advantages]
+- Much higher quality and range of qualities
+- More reliable
+- Generally better subtitles
+- Faster availability of new content
+- Addons are less likely to break
+:::
+
+:::danger[Disadvantages]
+- Reliant on seeders
+  - Unpopular/Old torrents may not have enough seeders to reliably stream.
+- Legal risk of torrenting
+:::
+
+While a VPN can solve the legal risk, it can potentially slow down your speeds and you will still be reliant on the seeders for the torrent to stream. You also cannot bind your VPN to Stremio, which means that if your VPN disconnects, your IP could be visible.
+
+A more effective and better solution to this is to use a debrid service.
+
+#### Metadata Addons
+Metadata addons provide metadata for content. This includes the name, actors, genre, runtime etc.
+These addons are used by Kodi to display information about the content you are watching. Each metadata provider will use separate title IDs for content.
+
+The principal addon who provides content on Kodi is TMDB Helper, also *"Torrent Addons"* can provide their own metadata
+
+
+## Debrid Services
+Debrid services generate unrestricted, high-speed, HTTPS links to torrents or files on supported file hosters (such as Mega, 1fichier etc) by downloading the torrent or file to their servers first.
+Once a file is downloaded to their servers, it remains there for a certain amount of time (dependent on the debrid service) and is available for any user to download.
+If another user accesses the same file, it resets the timer for the file to be deleted from the debrid service's servers.
+
+This is useful because it allows you to remove speed limitations and download restrictions imposed by file hosters.
+It also allows you to access torrents without exposing your IP address to the trackers on the torrent and risking a DMCA notice through your ISP.
+This means a VPN is not necessary when using a debrid service.
+
+Once a torrent or file has been "cached", it removes the need for seeders as the file is already downloaded to the debrid service's servers.
+Most torrents are already cached and are constantly being downloaded.
+This effectively means that they will remain cached and you will not need to wait for the debrid service to download the torrent first.
+You can just instantly download or stream the file.
+
+### Benefits over a VPN
+
+- Since debrid services are web-based, they can be accessed from any device with a web browser.
+  You do not need to install anything to use a debrid service, just paste the link to the torrent or file and it will generate a download link for you.
+  This makes it super convenient to use.
+
+- You don't need to worry about configuring kill switches or binding VPNs, as no torrenting is done on your device.
+
+- With a VPN, you are reliant on the seeders when downloading a torrent. However, due to the fact that most torrents on a debrid service are already cached, you do not need to rely on the number or speed of seeders for a torrent to stream or download quickly.
+  You will be able to download or stream the file at the maximum speed of your internet connection.
+  :::note
+  In cases where a torrent is not cached, you will still need to rely on the seeders for the torrent to download with a debrid service.
+  :::
+
+- Debrid services are usually cheaper than VPNs.
+
+## Integrating Debrid Services with Kodi
+
+As mentioned before, Kodi has 2 types of addons that provide streams: HTTP and Torrent addons.
+
+Debrid services can provide files from file hosters and torrents.
+
+Torrent addons can be configured to run the torrents they scraped through a debrid service.
+It can check if the torrent is cached on the debrid service and if it is, it will provide the link to the file on the debrid service's servers.
+If it isn't, it can provide a link that sends a request to the debrid service to cache the torrent.
+
+
+
+
+:::info
+All info I said before comes from [Viren's Stremio Guide](https://guides.viren070.me/stremio/technical-details) ❤❤
+:::
