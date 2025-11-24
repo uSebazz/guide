@@ -28,3 +28,156 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+
+img.tbimg {
+  display: initial;
+  vertical-align: middle;
+  height: 13px;
+  width: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  margin-top: 0;
+  margin-right: 2px;
+  margin-left: 0;
+  margin-bottom: 0px;
+  content: url("https://torbox.app/assets/logo-57adbf99.svg");
+}
+
+.tbimg:after {
+  vertical-align: middle;
+  height: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  margin-top: 0;
+  margin-right: 6px;
+  margin-left: 0;
+  margin-bottom: 4px;
+  content: url("https://ko-fi.com/img/whitelogo.svg");
+}
+
+.btn-container {
+  position: fixed !important;
+  bottom: 60px;
+  /* higher */
+  left: 20px;
+  /* opposite side */
+  z-index: 9999;
+  margin: 0 !important;
+}
+
+span.tbtext {
+  color: #fff;
+  letter-spacing: -0.15px;
+  /* Resetting line-height to fit inside the button's height */
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+}
+
+.tbtext a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tbtext a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.tb-button {
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  line-height: unset;
+  display: inline-flex;
+  /* Use flex to align icon and text */
+  align-items: center;
+  /* Vertically center icon and text */
+  background-color: #29abe0;
+  /* Reduced padding and increased border-radius for a pill-shaped button */
+  padding: 4px 14px;
+  border-radius: 30px;
+  /* Highly rounded, pill-like shape */
+
+  color: #fff;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+  border: 0 none #fff;
+  font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: 700;
+  font-size: 14px;
+  height: 36px;
+  /* Set a fixed height for consistent size */
+}
+
+a.tb-button:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.tb-button:hover {
+  opacity: 0.85;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+a.tb-button:active {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.tbtext img.tbimg {
+  height: 20px;
+  /* Slightly smaller icon */
+  width: auto;
+  margin-right: 6px;
+  margin-bottom: 0px;
+  /* Remove margin-bottom */
+  display: initial;
+  animation: tb-wiggle 3s infinite;
+}
+
+@keyframes tb-wiggle {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+
+  60% {
+    transform: rotate(0) scale(1);
+  }
+
+  75% {
+    transform: rotate(0) scale(1.12);
+  }
+
+  80% {
+    transform: rotate(0) scale(1.1);
+  }
+
+  84% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  88% {
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  92% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  96% {
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}

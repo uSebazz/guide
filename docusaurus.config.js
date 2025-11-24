@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -30,7 +30,7 @@ const config = {
   organizationName: 'usebazz', // Usually your GitHub org/user name.
   projectName: 'guide', // Usually your repo name.
   trailingSlash: false,
-  
+
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -73,6 +73,10 @@ const config = {
         items: [
           {
             type: 'localeDropdown',
+          },
+          {
+            type: "custom-torbox",
+            position: "right",
           },
         ],
       },
