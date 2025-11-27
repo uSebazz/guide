@@ -48,7 +48,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          routeBasePath: '/'
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
@@ -75,13 +75,19 @@ const config = {
             type: 'localeDropdown',
           },
           {
-            type: "custom-torbox",
-            position: "right",
+            type: 'custom-torbox',
+            position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+          hideable: true,
+        },
       },
       prism: {
         theme: prismThemes.github,

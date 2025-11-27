@@ -1,10 +1,9 @@
 :::warning
-Kodi is not available on the App Store, so it must be installed through sideloading.  
-I just recommend at this point dont do this, skip and use better alternatives like Fusion or Omni
+Kodi is not available on the App Store, so it must be installed through sideloading.<br />
+I recommend skipping this step and using better alternatives like <strong>Fusion</strong> or <strong>Omni</strong>.
 :::
 
-# iOS Setup Guide
-This guide will walk you through the steps to install Kodi on your iOS device using sideloading methods. Please note that this process may require a computer and some technical knowledge.
+Choose one of the methods below to install Kodi on your iOS device.
 
 <details>
     <summary>Jailbroken device method</summary>
@@ -17,17 +16,17 @@ This guide will walk you through the steps to install Kodi on your iOS device us
     - Open Cydia on your iOS device.
 
     - Open the "Search" tab
-    
+
     - Enter "Kodi" in the search field and touch the Kodi version corresponding to your device.
-    
+
     - Touch "Modify".
-    
+
     - Touch "Install".
-    
+
     - Touch "Confirm".
-    
+
     - Wait until the "Return to Cydia" button appears and touch it.
-    
+
     **And you're done! You should now be running Kodi v21.2 Omega for iOS. Enjoy!**
 
 </details>
@@ -35,10 +34,41 @@ This guide will walk you through the steps to install Kodi on your iOS device us
 <details>
     <summary>Non-jailbroken devices</summary>
     
-    There are several methods to sideload Kodi onto a non-jailbroken iOS device. Below are two common methods: using AltStore and using Cydia Impactor.
-
-
-    :::warning
-        Note: Sideloaded apps may require re-signing every 7 days if you are using a free Apple ID.
+    ### Sideload a self signed .ipa file
+    :::danger[Warning]
+        Currently, these methods require that Kodi be re-installed every 7 days if you are using a free iOS dev account.
     :::
+
+    **Pre-requisites:**
+    - Windows 7 or Higher
+    - [7-Zip](https://www.7-zip.org/)
+    - A `.deb` file of Kodi (see this [section](https://kodi.wiki/view/HOW-TO:Install_Kodi_for_iOS#Download_Kodi_package))
+
+    Converting the .deb to .ipa:
+
+    Before beginning the installation, you have to convert .deb file of Kodi into .ipa. If you already know how to convert .deb into .ipa, you can skip to the installation methods below.
+
+    - Right Click on .deb file of Kodi that you downloaded on your PC and Select 7-zip > Extract files. Click OK in the next Window.
+    - Open the resulting Folder and you will find data.tar file inside. Simply extract data.tar file with Right Click > 7-zip > Extract Files.
+    - Now you should have **data** folder and **data.tar** file in the folder.
+    - Go inside the data folder and open Applications folder. Here you will find a folder named **Kodi.app**.
+    - Here create a new folder and name it “Payload” without quotes. Now you should have 2 folders. Payload and Kodi.app folder. Make sure that the P is capital in Payload.
+    - Now simply drag the Kodi.app folder and drop it on top of the Payload folder. *In other words, copy kodi.app and paste it inside Payload folder.*
+    - Next you have to Right-click the Payload folder and Click 7-zip > Add to archive option.
+    - A new window will pop up. Here you have to make sure that the Archive format is set to zip and name the archive ending with .ipa . Something like Kodi.ipa. After that click OK.
+
+    Now you should have your kodi.ipa file ready for installation.
+
+    #### Installing Kodi using Sideloadly
+    Download [Sideloadly](https://sideloadly.io/) and install it on your PC.
+    :::note
+        Sideloadly is still a work-in-progress and there might be some bugs that you face while installing Kodi.
+    :::
+
+    - Connect your iDevice with your computer, and make sure that it is turned ON. If iTunes or some other program pops up then close that first.
+    - Open Sideloadly and check your device is detected. Enter your Apple account, choose your Kodi ipa file and press Start button. You will be asked to enter your Apple account password and verification code. This is required by Sideloadly to sign the ipa file with your own ID.
+    - Wait until Sideloadly reports process as Done. You’ll be able to see Kodi icon on your iDevice.
+    - Once you see Kodi icon in your iDevice, go in Settings > General > Profiles & Device management and Trust the Apple ID you used which installation.
+    - Now you should have kodi working on your iOS device.
+
 </details>

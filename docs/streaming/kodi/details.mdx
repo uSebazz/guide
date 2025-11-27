@@ -2,16 +2,18 @@
 title: Details | Kodi
 sidebar_label: Details
 sidebar_position: 2
+description: Detailed explanation of Kodi, its addons, and debrid services.
 ---
 
 # Details
+
 ## Kodi
+
 Kodi is a software media player and entertainment hub, It can stream torrents provided by the addons,
-show photos from local storage, you can watch tv channels if you provide a ipvt, 
+show photos from local storage, you can watch tv channels if you provide a ipvt,
 listen music (locale storage), also you can play games in it!
 
 In this guide I’ll focus only in **Movies/Series**. The way we gonna search them is throught Addons
-
 
 ### Addons
 
@@ -22,27 +24,27 @@ Unlike Stremio, where addons are remote web services, **Kodi addons are locally 
 Kodi provides an addon framework and API that developers can use to build different types of addons. A Kodi addon can provide:
 
 - **Video Addons:**
-Fetch streams from websites, file hosts, debrid services, or torrent sources. These addons deliver the *actual playable content*.
+  Fetch streams from websites, file hosts, debrid services, or torrent sources. These addons deliver the _actual playable content_.
 
 - **Metadata & Scraper Addons:**
-Provide metadata such as titles, actors, genres, artwork, ratings, and plots used in Kodi's library.
+  Provide metadata such as titles, actors, genres, artwork, ratings, and plots used in Kodi's library.
 
 - **Subtitle Addons:**
-Retrieve subtitles based on the video being played, using title, language preferences, or file hashes.
+  Retrieve subtitles based on the video being played, using title, language preferences, or file hashes.
 
 - **Repository Addons:**
-Act as online addon stores where users can browse, install, and update other addons.
+  Act as online addon stores where users can browse, install, and update other addons.
 
 - **Program Addons / Scripts:**
-Tools, utilities, maintenance tools, debrid managers, torrent engines, and other system-level extensions.
+  Tools, utilities, maintenance tools, debrid managers, torrent engines, and other system-level extensions.
 
 When streaming content, Kodi video addons typically deliver one of two types of sources:
 
 - **HTTP/Direct Streams:** Resolved links from hosters or file servers.
 - **Torrent-Based Streams:** Streams delivered using torrent engines or premium debrid services.
 
-
 #### HTTP Addons
+
 HTTP addons will scrape for sources from a central server and provide these sources to Kodi.
 
 Addons that use HTTP streams are safe to use and will not get you flagged by your ISP. These streams are stored on a central server. Due to this, they are usually of lower size (and the quality) than torrents. This is because it reduces costs. Although they may have a lower quality, due to the lower file size, it requires less bandwidth to stream. This is useful for users with slower internet connections.
@@ -52,21 +54,23 @@ HTTP streams are reliant on the server that hosts the file. A benefit of this is
 In summary, these are the advantages and disadvantages of HTTP addons:
 
 :::tip[Advantages]
+
 - No need for a VPN
 - No need to worry about seeders
 - Lower file size, which means less bandwidth is required to stream
-:::
+  :::
 
 :::danger[Disadvantages]
+
 - Lower quality
 - Reliant on the server that hosts the file
-    - These types of sources are often taken down
+  - These types of sources are often taken down
 - Server can be overloaded with users, causing buffering
 - Addons can break often due to the hoster making changes to counter
-:::
-
+  :::
 
 #### Torrent Addons
+
 Torrent addons, will scrape torrents from available sources on the web and provide these torrents to Kodi to stream.
 
 Torrents are based on a decentralised network and are not reliant on a single server to provide the content. As a result, torrents are usually of much higher quality than streams from HTTP addons. Other than generally having a higher quality, the range of qualities is much larger. There can be up to hundreds of, if not more, torrents available for a single movie or TV show episode, ranging from Blu-Ray REMUX to 480p quality, or even lower.
@@ -79,6 +83,7 @@ However, torrenting carries the risk of your IP being shown to the trackers on t
 It is important to note that the legal risk of torrenting is dependent on your country and ISP. In most countries, torrenting won't be an issue.
 
 Countrys where torrenting is ilegal:
+
 - **United States (USA)**
 - **United Kingdom (UK)**
 - **Germany**
@@ -91,37 +96,40 @@ Countrys where torrenting is ilegal:
 - **Norway**
 - **Denmark**
 - **Sweden**
-:::
+  :::
 
 The speed of a torrent stream is heavily reliant on the number of seeders for that torrent. If a torrent has a small number of low speed seeders, you will encounter a lot of buffering.
 
 In summary, these are the advantages and disadvantages of torrent addons:
 :::tip[Advantages]
+
 - Much higher quality and range of qualities
 - More reliable
 - Generally better subtitles
 - Faster availability of new content
 - Addons are less likely to break
-:::
+  :::
 
 :::danger[Disadvantages]
+
 - Reliant on seeders
   - Unpopular/Old torrents may not have enough seeders to reliably stream.
 - Legal risk of torrenting
-:::
+  :::
 
 While a VPN can solve the legal risk, it can potentially slow down your speeds and you will still be reliant on the seeders for the torrent to stream. You also cannot bind your VPN to Stremio, which means that if your VPN disconnects, your IP could be visible.
 
 A more effective and better solution to this is to use a debrid service.
 
 #### Metadata Addons
+
 Metadata addons provide metadata for content. This includes the name, actors, genre, runtime etc.
 These addons are used by Kodi to display information about the content you are watching. Each metadata provider will use separate title IDs for content.
 
-The principal addon who provides content on Kodi is TMDB Helper, also *"Torrent Addons"* can provide their own metadata
-
+The principal addon who provides content on Kodi is TMDB Helper, also _"Torrent Addons"_ can provide their own metadata
 
 ## Debrid Services
+
 Debrid services generate unrestricted, high-speed, HTTPS links to torrents or files on supported file hosters (such as Mega, 1fichier etc) by downloading the torrent or file to their servers first.
 Once a file is downloaded to their servers, it remains there for a certain amount of time (dependent on the debrid service) and is available for any user to download.
 If another user accesses the same file, it resets the timer for the file to be deleted from the debrid service's servers.
@@ -160,9 +168,6 @@ Debrid services can provide files from file hosters and torrents.
 Torrent addons can be configured to run the torrents they scraped through a debrid service.
 It can check if the torrent is cached on the debrid service and if it is, it will provide the link to the file on the debrid service's servers.
 If it isn't, it can provide a link that sends a request to the debrid service to cache the torrent.
-
-
-
 
 :::info
 All info I said before comes from [Viren's Stremio Guide](https://guides.viren070.me/stremio/technical-details) ❤❤

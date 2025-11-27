@@ -36,8 +36,6 @@
   --button-active-box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
 
-
-
 img.tbimg {
   display: initial;
   vertical-align: middle;
@@ -50,7 +48,7 @@ img.tbimg {
   margin-right: 2px;
   margin-left: 0;
   margin-bottom: 0px;
-  content: url("https://torbox.app/assets/logo-57adbf99.svg");
+  content: url('https://torbox.app/assets/logo-57adbf99.svg');
 }
 
 .tbimg:after {
@@ -63,7 +61,7 @@ img.tbimg {
   margin-right: 6px;
   margin-left: 0;
   margin-bottom: 4px;
-  content: url("https://ko-fi.com/img/whitelogo.svg");
+  content: url('https://ko-fi.com/img/whitelogo.svg');
 }
 
 .btn-container {
@@ -115,7 +113,11 @@ a.tb-button {
   overflow-wrap: break-word;
   vertical-align: middle;
   border: 0 none #fff;
-  font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+  font-family:
+    'Quicksand',
+    Helvetica,
+    Century Gothic,
+    sans-serif;
   text-decoration: none;
   text-shadow: none;
   font-weight: 700;

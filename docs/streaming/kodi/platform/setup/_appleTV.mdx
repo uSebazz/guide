@@ -1,0 +1,59 @@
+:::warning
+Kodi is not available on the App Store, so it must be installed through sideloading.<br />
+I recommend skipping this step and using better alternatives like <strong>Fusion</strong> or <strong>Omni</strong>.
+:::
+
+#### Apple TV versions supported by Kodi:
+
+- Apple TV 4 (Called "Apple TV HD" by Apple)
+- Apple TV 5 (Called "Apple TV 4K" by Apple)
+
+---
+
+### Install from Windows (only for Apple TV 4)
+
+#### What about the Apple TV 4K?
+
+Unfortunately the Apple TV 4K does not have a USB-C. If you are not jailbroken the only official way to sideload Kodi on your device is to use Xcode on macOS with a wireless connection.
+To get macOS on your computer you can use a virtual machine or check for building a [hackintosh](https://en.wikipedia.org/wiki/Hackintosh), but we will not discuss this here.
+
+#### Requirements:
+
+- [Cydia Impactor](http://www.cydiaimpactor.com/)
+- Windows 7 or higher
+- Latest version of [iTunes](https://www.apple.com/itunes/) is needed to be installed.
+- Kodi `.deb` file for tvOS: [Download here](https://mirrors.kodi.tv/releases/darwin/tvos/org.xbmc.kodi-tvos_21.2-tvos.deb?https=1) (Lastest stable version at the time of writing)
+- A USB-C cable, without that, you can't connect your Apple TV with computer
+
+#### Convert .deb to .ipa:
+
+- Right Click on .deb file of Kodi that you downloaded on your PC and Select 7-zip > Extract files. Click OK in the next Window.
+- Open the resulting Folder and you will find data.tar file inside. Simply extract data.tar file with Right Click > 7-zip > Extract Files.
+- Now you should have **data** folder and **data.tar** file in the folder.
+- Go inside the data folder and open Applications folder. Here you will find a folder named **Kodi.app**.
+- Here create a new folder and name it “Payload” without quotes. Now you should have 2 folders. Payload and Kodi.app folder. Make sure that the P is capital in Payload.
+- Now simply drag the Kodi.app folder and drop it on top of the Payload folder. _In other words, copy kodi.app and paste it inside Payload folder._
+- Next you have to Right-click the Payload folder and Click 7-zip > Add to archive option.
+- A new window will pop up. Here you have to make sure that the Archive format is set to zip and name the archive ending with .ipa . Something like Kodi.ipa. After that click OK.
+
+---
+
+#### Install Kodi on your Apple TV
+
+Connect your Apple TV 4 with power and make sure that it is turned ON before proceeding.
+
+- Connect your Apple TV 4 with your computer, and make sure that it is turned ON. If iTunes or some other program pops up then close that first.
+- Extract the Impactor zip file somewhere in your computer and Open Impactor.exe. Don’t select “Run as Administrator” for Cydia Impactor.
+- Make sure that your Apple TV is detected by Cydia Impactor. After that Drag and drop the Kodi.ipa file in Cydia Impactor.
+- Cydia Impactor will ask you to Enter your Apple ID. Enter a Valid Apple ID here and click OK Cydia Impactor will start installing Kodi on your Apple TV.
+- Wait for the installation to complete. Once done, simply look for Kodi icon on your Apple TV 4 main screen and Now you can open it.
+
+:::warning[NOTICE]
+If you are using a free Apple developper account you will need to do this step every 7 days, so keep your IPA file on your computer
+:::
+
+---
+
+### Install from macOS (Apple TV 4 and Apple TV 4K)
+
+The kodi guide for macOS is located here: [macOS setup guide](<https://kodi.wiki/view/HOW-TO:Install_Kodi_on_Apple_TV_4_and_5_(HD_and_4K)#Install_from_Mac>). It is better you see that guide.
